@@ -1,0 +1,152 @@
+.booking-summary-card {
+  background-color: var(--primary-light);
+  border: 2px solid var(--primary-green);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.summary-header {
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-green);
+  padding-bottom: 15px;
+}
+
+.club-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-green);
+  margin: 0 0 8px 0;
+}
+
+.club-address {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.summary-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.label {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.value {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.offer-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--white);
+  border: 2px dashed var(--primary-green);
+  border-radius: 8px;
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.offer-button:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.price-section {
+  background-color: var(--white);
+  border: 2px solid var(--primary-green);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-label {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.price-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.additional-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.info-block {
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-gray);
+}
+
+.info-block h5 {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-light);
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-block p {
+  font-size: 14px;
+  color: var(--text-dark);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .booking-summary-card {
+    padding: 15px;
+  }
+
+  .additional-info {
+    grid-template-columns: 1fr;
+  }
+
+  .price-value {
+    font-size: 18px;
+  }
+}

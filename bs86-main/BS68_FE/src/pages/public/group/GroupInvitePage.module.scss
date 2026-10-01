@@ -1,0 +1,239 @@
+.page,
+.loadingShell {
+    min-height: 100%;
+    padding: 24px 20px 28px;
+    background:
+        radial-gradient(circle at top center, rgba(14, 165, 233, 0.18), transparent 34%),
+        linear-gradient(180deg, #f5fbff 0%, #eff6fb 100%);
+    color: #0f172a;
+}
+
+.card,
+.feedbackCard,
+.loadingCard,
+.errorBanner {
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+.card {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+.eyebrow,
+.groupLabel {
+    margin: 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #0f766e;
+}
+
+.card h1 {
+    margin: 14px 0 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.description {
+    margin: 16px 0 0;
+    color: #475569;
+    line-height: 1.75;
+}
+
+.groupCard {
+    margin-top: 24px;
+    padding: 22px;
+    border-radius: 24px;
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.headerRow h2 {
+    margin: 10px 0 0;
+    font-size: 1.7rem;
+}
+
+.statusBadge {
+    align-self: flex-start;
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.12);
+    color: #115e59;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+}
+
+.groupDescription {
+    margin: 16px 0 0;
+    color: #475569;
+    line-height: 1.75;
+}
+
+.metaGrid {
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.metaGrid div {
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.metaGrid dt {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.metaGrid dd {
+    margin: 8px 0 0;
+    color: #0f172a;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+.errorBanner {
+    margin-top: 18px;
+    padding: 16px 18px;
+    color: #b91c1c;
+    background: rgba(254, 242, 242, 0.98);
+    border-color: rgba(239, 68, 68, 0.16);
+    font-weight: 600;
+}
+
+.actionRow {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.primaryButton,
+.secondaryButton {
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primaryButton {
+    border: none;
+    background: linear-gradient(135deg, #0f766e, #166534);
+    color: #f8fafc;
+    cursor: pointer;
+}
+
+.secondaryButton {
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #fff;
+    color: #0f172a;
+}
+
+.notice {
+    margin-top: 22px;
+    padding: 18px;
+    border-radius: 20px;
+    background: rgba(14, 165, 233, 0.08);
+    color: #0f172a;
+    line-height: 1.7;
+}
+
+.feedbackCard {
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 56px 28px;
+    text-align: center;
+}
+
+.feedbackIcon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(14, 165, 233, 0.14);
+    color: #0284c7;
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedbackCard h1 {
+    margin: 0;
+}
+
+.feedbackCard p {
+    max-width: 50ch;
+    margin: 14px auto 22px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.loadingCard {
+    max-width: 860px;
+    min-height: 360px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, #e2e8f0, #f8fafc, #e2e8f0);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .page,
+    .loadingShell {
+        padding: 14px 14px 18px;
+    }
+
+    .card,
+    .feedbackCard,
+    .loadingCard,
+    .errorBanner {
+        border-radius: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .metaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerRow {
+        flex-direction: column;
+    }
+}

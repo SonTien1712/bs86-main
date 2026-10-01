@@ -1,0 +1,114 @@
+.shell {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.left {
+    background: #f7f7f7;
+    padding: 16px;
+    overflow: auto;
+}
+
+.map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.row {
+    margin-top: 12px;
+}
+
+.rowGrid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.65);
+    margin-bottom: 6px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+}
+
+.actions {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn,
+.btnPrimary {
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    background: #fff;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btnPrimary {
+    border: none;
+    background: #2f8f6b;
+    color: #fff;
+}
+
+.btnPrimary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.hint {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(47, 143, 107, 0.12);
+    color: #1b5e48;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.note {
+    margin-top: 12px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 13px;
+    line-height: 1.4;
+}

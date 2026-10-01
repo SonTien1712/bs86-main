@@ -1,0 +1,62 @@
+.reportContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f4f6; /* nền sáng */
+}
+
+.reportCard {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 16px;
+    width: 400px;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.reportCard h2 {
+    margin: 0;
+    text-align: center;
+    color: #ef4444;
+}
+
+.reportCard textarea {
+    min-height: 120px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    resize: none;
+    outline: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.reportCard textarea:focus {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.reportCard button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reportCard button:hover {
+    background: #dc2626;
+}
+
+.reportMsg {
+    text-align: center;
+    font-size: 14px;
+    color: #16a34a; /* xanh thành công */
+}

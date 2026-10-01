@@ -1,0 +1,303 @@
+.page {
+    min-height: 100%;
+    background:
+        radial-gradient(circle at top right, rgba(16, 185, 129, 0.18), transparent 30%),
+        linear-gradient(180deg, #f4fbf7 0%, #eff6f3 100%);
+    color: #0f172a;
+}
+
+.hero {
+    padding: 28px 20px 18px;
+}
+
+.heroContent,
+.card,
+.feedbackCard,
+.skeletonCard,
+.successBanner {
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+.heroContent {
+    padding: 28px;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #0f766e;
+}
+
+.heroContent h1 {
+    margin: 0;
+    font-size: clamp(2rem, 3.6vw, 3.35rem);
+    line-height: 1.05;
+    color: #052e2b;
+}
+
+.heroDescription {
+    max-width: 68ch;
+    margin: 16px 0 0;
+    color: #475569;
+    line-height: 1.75;
+}
+
+.heroActions {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.primaryButton,
+.statPill,
+.cardAction {
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.primaryButton {
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #0f766e, #166534);
+    color: #f8fafc;
+}
+
+.statPill {
+    background: rgba(15, 118, 110, 0.1);
+    color: #115e59;
+}
+
+.content {
+    padding: 0 20px 28px;
+}
+
+.successBanner {
+    margin-bottom: 18px;
+    padding: 18px 20px;
+    color: #166534;
+    font-weight: 600;
+    background: rgba(240, 253, 244, 0.98);
+    border-color: rgba(22, 163, 74, 0.16);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1);
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.cardEyebrow {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #0f766e;
+}
+
+.card h2 {
+    margin: 8px 0 0;
+    font-size: 1.35rem;
+    line-height: 1.35;
+}
+
+.statusBadge {
+    align-self: flex-start;
+    min-height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.12);
+    color: #115e59;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cardDescription {
+    margin: 0;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.metaGrid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.metaGrid div {
+    padding: 14px 16px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.metaGrid dt {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.metaGrid dd {
+    margin: 8px 0 0;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.cardAction {
+    margin-top: auto;
+    width: fit-content;
+    background: rgba(15, 118, 110, 0.08);
+    color: #0f766e;
+}
+
+.feedbackCard {
+    padding: 50px 28px;
+    text-align: center;
+}
+
+.feedbackIcon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: rgba(15, 118, 110, 0.12);
+    color: #0f766e;
+    font-size: 1.4rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedbackCard h2 {
+    margin: 0;
+    color: #052e2b;
+}
+
+.feedbackCard p {
+    max-width: 48ch;
+    margin: 14px auto 22px;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.skeletonCard {
+    padding: 24px;
+    display: grid;
+    gap: 14px;
+}
+
+.skeletonLine,
+.skeletonLineShort,
+.skeletonLineTiny {
+    display: block;
+    height: 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #e2e8f0, #f8fafc, #e2e8f0);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+.skeletonLineShort {
+    width: 34%;
+}
+
+.skeletonLineTiny {
+    width: 46%;
+}
+
+@keyframes shimmer {
+    from {
+        background-position: 200% 0;
+    }
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 1080px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .hero,
+    .content {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .hero {
+        padding-top: 16px;
+        padding-bottom: 12px;
+    }
+
+    .heroContent,
+    .card,
+    .feedbackCard,
+    .skeletonCard,
+    .successBanner {
+        border-radius: 20px;
+    }
+
+    .heroContent,
+    .card,
+    .skeletonCard {
+        padding: 20px;
+    }
+
+    .content {
+        padding-bottom: 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .metaGrid {
+        grid-template-columns: 1fr;
+    }
+}

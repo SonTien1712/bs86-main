@@ -1,0 +1,393 @@
+/* ── Page layout ─────────────────────────────────────────────────────────────── */
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.pageHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pageTitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e5eefb;
+    margin: 0 0 0.25rem;
+}
+
+.pageDesc {
+    font-size: 0.83rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.refreshBtn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+    font-size: 0.83rem;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+    align-self: flex-start;
+}
+.refreshBtn:hover:not(:disabled) { background: rgba(255,255,255,0.1); color: #e5eefb; }
+.refreshBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Count badge ─────────────────────────────────────────────────────────────── */
+.countBadge {
+    display: inline-block;
+    background: rgba(251,146,60,0.12);
+    border: 1px solid rgba(251,146,60,0.3);
+    color: #fb923c;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.9rem;
+    border-radius: 99px;
+}
+
+/* ── States ──────────────────────────────────────────────────────────────────── */
+.loading {
+    color: #64748b;
+    font-size: 0.9rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: #475569;
+    padding: 3rem;
+    text-align: center;
+    background: rgba(255,255,255,0.02);
+    border-radius: 12px;
+    border: 1px dashed rgba(255,255,255,0.07);
+    font-size: 0.9rem;
+}
+
+.emptyIcon { font-size: 2.5rem; }
+
+.errorMsg {
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #f87171;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────────── */
+.tableWrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    min-width: 900px;
+}
+
+.table th {
+    background: rgba(255,255,255,0.04);
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.75rem 0.85rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 0.8rem 0.85rem;
+    color: #cbd5e1;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+}
+
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: rgba(255,255,255,0.025); }
+
+.idCell   { color: #64748b; font-size: 0.78rem; }
+.amtCell  { color: #e5eefb; font-weight: 600; }
+.feeCell  { color: #f87171; }
+.netCell  { color: #34d399; font-weight: 600; }
+.monoCell { font-family: monospace; color: #60a5fa; letter-spacing: 0.06em; }
+.dateCell { color: #475569; font-size: 0.78rem; white-space: nowrap; }
+
+/* ── Row action buttons ──────────────────────────────────────────────────────── */
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btnApproveRow {
+    background: rgba(52,211,153,0.12);
+    border: 1px solid rgba(52,211,153,0.25);
+    color: #34d399;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+.btnApproveRow:hover { background: rgba(52,211,153,0.22); }
+
+.btnRejectRow {
+    background: rgba(248,113,113,0.1);
+    border: 1px solid rgba(248,113,113,0.25);
+    color: #f87171;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+.btnRejectRow:hover { background: rgba(248,113,113,0.2); }
+
+/* ── Status badges ───────────────────────────────────────────────────────────── */
+.badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+
+.badgeGreen  { background: rgba(52,211,153,0.15);  color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+.badgeBlue   { background: rgba(96,165,250,0.15);  color: #60a5fa; border: 1px solid rgba(96,165,250,0.3); }
+.badgeOrange { background: rgba(251,146,60,0.15);  color: #fb923c; border: 1px solid rgba(251,146,60,0.3); }
+.badgeTeal   { background: rgba(45,212,191,0.15);  color: #2dd4bf; border: 1px solid rgba(45,212,191,0.3); }
+.badgeRed    { background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
+.badgeGray   { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); }
+
+/* ── Modal overlay ───────────────────────────────────────────────────────────── */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.modal {
+    background: #0f172a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+/* ── Modal header ─────────────────────────────────────────────────────────────── */
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.modalTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e5eefb;
+    margin: 0;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    transition: color 0.15s;
+}
+.closeBtn:hover { color: #e5eefb; }
+
+/* ── Modal body ───────────────────────────────────────────────────────────────── */
+.modalBody {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.infoGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.infoLabel { color: #64748b; }
+.infoValue { color: #e5eefb; font-weight: 500; }
+.amtHighlight { color: #fb923c; font-size: 1rem; font-weight: 700; }
+.netHighlight { color: #34d399; font-size: 1rem; font-weight: 700; }
+.mono { font-family: monospace; color: #60a5fa; letter-spacing: 0.06em; }
+
+/* ── Password section ─────────────────────────────────────────────────────────── */
+.passwordSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.passwordLabel {
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: #94a3b8;
+}
+
+.passwordInput {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: #e5eefb;
+    font-size: 0.9rem;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    transition: border-color 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+}
+.passwordInput:focus { border-color: #38bdf8; }
+
+.textarea {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: #e5eefb;
+    font-size: 0.85rem;
+    padding: 0.65rem 0.9rem;
+    outline: none;
+    transition: border-color 0.15s;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    font-family: inherit;
+}
+.textarea:focus { border-color: #f87171; }
+
+.errMsg {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    color: #f87171;
+    border-radius: 8px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.83rem;
+}
+
+/* ── Modal footer ─────────────────────────────────────────────────────────────── */
+.modalFooter {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding: 1.25rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.btnCancel {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.btnCancel:hover { background: rgba(255,255,255,0.1); color: #e5eefb; }
+
+.btnApprove {
+    background: linear-gradient(135deg, #059669, #10b981);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+}
+.btnApprove:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+.btnApprove:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btnReject {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    transition: opacity 0.15s, transform 0.1s;
+}
+.btnReject:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+.btnReject:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Toast notification ───────────────────────────────────────────────────────── */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #0f172a;
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #e5eefb;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 2000;
+    animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}

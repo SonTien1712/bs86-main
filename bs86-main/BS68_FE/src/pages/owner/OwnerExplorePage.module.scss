@@ -1,0 +1,264 @@
+/* =============================================
+   OwnerExplorePage — Quản lý bài đăng của Owner
+   ============================================= */
+
+.shell {
+  min-height: 100dvh;
+  background: #0f1117;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 80px;
+}
+
+/* -------- HEADER -------- */
+.header {
+  background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
+  padding: 20px 16px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.headerTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headerSub {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.newBtn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover { transform: scale(1.04); box-shadow: 0 4px 16px rgba(34,197,94,0.3); }
+}
+
+/* -------- MODAL -------- */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal {
+  background: #1e2436;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.modalTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+
+  label {
+    display: block;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 12px;
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    font-family: inherit;
+    resize: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: #22c55e;
+    }
+
+    &::placeholder { color: #4b5563; }
+  }
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancelBtn {
+  flex: 1;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #9ca3af;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover { background: rgba(255,255,255,0.1); }
+}
+
+.submitBtn {
+  flex: 2;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+  &:hover:not(:disabled) { transform: scale(1.02); }
+}
+
+.errMsg {
+  color: #f87171;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(248,113,113,0.1);
+  border-radius: 8px;
+}
+
+.successMsg {
+  color: #4ade80;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: rgba(74,222,128,0.1);
+  border-radius: 8px;
+}
+
+/* -------- POSTS LIST -------- */
+.section {
+  padding: 16px;
+}
+
+.sectionTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 14px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1e2436, #1a1f2e);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: transform 0.2s;
+
+  &:hover { transform: translateY(-1px); }
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.activeBadge {
+  background: rgba(34,197,94,0.15);
+  border: 1px solid rgba(34,197,94,0.3);
+  color: #22c55e;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.postText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d1d5db;
+  white-space: pre-wrap;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.metaInfo {
+  font-size: 0.75rem;
+  color: #6b7280;
+
+  span { color: #9ca3af; }
+}
+
+.postTime {
+  font-size: 0.73rem;
+  color: #4b5563;
+}
+
+/* -------- STATES -------- */
+.loading, .empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6b7280;
+}
+
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid rgba(34,197,94,0.2);
+  border-top-color: #22c55e;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+.emptyIcon { font-size: 3rem; margin-bottom: 12px; }
+
+@keyframes spin { to { transform: rotate(360deg); } }

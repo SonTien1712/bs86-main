@@ -1,0 +1,15 @@
+.shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.main {
+    flex: 1;
+    min-height: 0; /* QUAN TRỌNG để child 100% hoạt động đúng */
+    position: relative;
+    background: #ffffff;
+    padding-top: 0;
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+}

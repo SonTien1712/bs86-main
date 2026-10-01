@@ -1,0 +1,107 @@
+.page {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    height: calc(100vh - 90px); // ✅ trừ footer nếu footer fixed ~ 90px
+    gap: 16px;
+    padding: 16px;
+    background: #f3f4f6;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #e5e7eb;
+}
+
+.card {
+    width: 100%;
+    background: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.label {
+    display: block;
+    font-weight: 700;
+    margin: 10px 0 6px;
+}
+
+.textarea {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 12px;
+    outline: none;
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.input {
+    width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 12px;
+    outline: none;
+    background: #f9fafb;
+}
+
+.btnRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.btnGhost {
+    flex: 1;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.btnPrimaryOutline {
+    flex: 1;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid #2f8f6b;
+    background: #fff;
+    color: #2f8f6b;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.btnPrimary {
+    flex: 1;
+    height: 44px;
+    border-radius: 999px;
+    border: none;
+    background: #2f8f6b;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.tip {
+    margin-top: 14px;
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 13px;
+    line-height: 1.4;
+}

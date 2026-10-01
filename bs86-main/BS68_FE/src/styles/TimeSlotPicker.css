@@ -1,0 +1,82 @@
+.time-slot-picker {
+  margin-bottom: 30px;
+}
+
+.picker-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+}
+
+.time-slots-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: var(--bg-light);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.time-slot {
+  padding: 12px;
+  background-color: var(--white);
+  border: 2px solid var(--border-gray);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.time-slot:hover:not(:disabled) {
+  border-color: var(--primary-green);
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(27, 127, 71, 0.1);
+}
+
+.time-slot:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.time-slot.selected {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.time-slot.adjacent {
+  background-color: rgba(27, 127, 71, 0.1);
+  border-color: var(--primary-green);
+}
+
+.time-slot.booked {
+  background-color: var(--accent-red);
+  color: var(--white);
+  border-color: var(--accent-red);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.time-slot:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .time-slots-container {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .time-slot {
+    padding: 10px;
+    font-size: 12px;
+  }
+}

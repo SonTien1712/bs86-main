@@ -1,0 +1,398 @@
+﻿﻿.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.title {
+    font-size: 1.18rem;
+    font-weight: 900;
+    color: var(--text);
+}
+
+.subtitle {
+    margin-top: 8px;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-size: 0.9rem;
+    max-width: 68ch;
+}
+
+.message {
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    border: 1px solid transparent;
+}
+
+.error {
+    background: rgba(254, 242, 242, 0.95);
+    color: #dc2626;
+    border-color: rgba(248, 113, 113, 0.28);
+}
+
+.success {
+    background: rgba(240, 253, 244, 0.95);
+    color: #047857;
+    border-color: rgba(16, 185, 129, 0.24);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.sidebar,
+.summaryCard,
+.editorCard,
+.dangerZone,
+.stateCard,
+.previewCard {
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(248, 250, 252, 0.92)
+    );
+    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.06);
+}
+
+.sidebar {
+    padding: 16px;
+    position: sticky;
+    top: 16px;
+}
+
+.sidebarTitle {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.fieldList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fieldCard {
+    width: 100%;
+    text-align: left;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 18px;
+    padding: 14px;
+    cursor: pointer;
+    transition:
+        border-color 0.18s ease,
+        transform 0.18s ease,
+        background 0.18s ease;
+}
+
+.fieldCard:hover,
+.fieldCardActive {
+    border-color: rgba(37, 99, 235, 0.26);
+    background: linear-gradient(
+        180deg,
+        rgba(37, 99, 235, 0.1),
+        rgba(14, 165, 233, 0.08)
+    );
+    transform: translateY(-1px);
+}
+
+.fieldCardHeader {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.fieldCardTitle {
+    font-weight: 800;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.statusBadge {
+    flex-shrink: 0;
+    border-radius: 999px;
+    padding: 5px 10px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    font-size: 0.7rem;
+    font-weight: 800;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+}
+
+.fieldCardMeta {
+    margin-top: 8px;
+    color: #047857;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.fieldCardAddress {
+    margin-top: 8px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.84rem;
+}
+
+.fieldCardFooter {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--text-muted);
+    font-size: 0.76rem;
+}
+
+.editorStack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.summaryCard,
+.editorCard,
+.dangerZone {
+    padding: 18px;
+}
+
+.summaryCard h3,
+.sectionHeader h4,
+.dangerZone h4 {
+    margin: 6px 0 0;
+    color: var(--text);
+    font-size: 1.06rem;
+}
+
+.summaryCard p,
+.dangerZone p {
+    margin: 10px 0 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.summaryLabel,
+.sectionLabel {
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.summaryMeta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.summaryMeta span {
+    border-radius: 999px;
+    padding: 6px 10px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--text-soft);
+    font-size: 0.76rem;
+    font-weight: 700;
+}
+
+.sectionHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.79rem;
+    color: var(--text-soft);
+    font-weight: 700;
+}
+
+.inputGroup input,
+.inputGroup select,
+.inputGroup textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.92rem;
+}
+
+.inputGroup select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #ffffff;
+}
+
+.inputGroup select option {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.inputGroup textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus,
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: rgba(37, 99, 235, 0.44);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.mapBox {
+    height: 280px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.uploadRow {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.uploadButton,
+.primaryButton,
+.dangerButton {
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.uploadButton {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px dashed rgba(148, 163, 184, 0.26);
+    color: var(--text);
+}
+
+.uploadHint {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.previewCard {
+    margin-top: 16px;
+    padding: 16px;
+}
+
+.previewLabel {
+    color: var(--text-soft);
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.previewImage {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #0f172a;
+}
+
+.primaryButton {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.16);
+}
+
+.dangerZone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.dangerButton {
+    background: rgba(254, 242, 242, 0.95);
+    color: #dc2626;
+    border: 1px solid rgba(248, 113, 113, 0.28);
+}
+
+.primaryButton:disabled,
+.dangerButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.primaryButton:hover,
+.dangerButton:hover,
+.uploadButton:hover,
+.fieldCard:hover {
+    transform: translateY(-1px);
+}
+
+.stateCard {
+    padding: 22px 18px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 760px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .sectionHeader,
+    .dangerZone {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

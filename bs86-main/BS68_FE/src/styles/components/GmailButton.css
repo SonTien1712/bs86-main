@@ -1,0 +1,38 @@
+.gmail-button {
+  width: 100%;
+  min-height: 50px;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(134, 239, 172, 0.28);
+  border-radius: 16px;
+  background: rgba(134, 239, 172, 0.08);
+  color: #d9fff0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: inherit;
+}
+
+.gmail-button:hover:not(:disabled) {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.gmail-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.gmail-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gmail-icon {
+  width: 20px;
+  height: 20px;
+  color: #99f6e4;
+}

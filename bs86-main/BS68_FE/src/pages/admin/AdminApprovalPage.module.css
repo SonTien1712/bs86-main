@@ -1,0 +1,319 @@
+.panel {
+    display: grid;
+    gap: 18px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.title {
+    margin: 8px 0 0;
+    color: #0f172a;
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+.description {
+    margin: 10px 0 0;
+    max-width: 68ch;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tabGroup {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    width: fit-content;
+    border: 0.5px solid rgba(15, 23, 42, 0.08);
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.tabButton {
+    min-height: 36px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #64748b;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.tabButtonActive {
+    background: #ffffff;
+    color: #1d4ed8;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.primaryButton,
+.approveButton,
+.rejectButton {
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+}
+
+.primaryButton {
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.16);
+}
+
+.approveButton {
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #059669, #10b981);
+    box-shadow: 0 14px 28px rgba(16, 185, 129, 0.14);
+}
+
+.rejectButton {
+    border: 0.5px solid #fecaca;
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.primaryButton:hover,
+.approveButton:hover,
+.rejectButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.primaryButton:disabled,
+.approveButton:disabled,
+.rejectButton:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.actionGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.counterChip {
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    background: #eff6ff;
+    border: 0.5px solid #bfdbfe;
+    color: #1d4ed8;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.error {
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #fef2f2;
+    border: 0.5px solid #fecaca;
+    color: #dc2626;
+}
+
+.empty {
+    padding: 28px;
+    border-radius: 18px;
+    background: #f7f8fb;
+    border: 1px dashed rgba(15, 23, 42, 0.12);
+    color: #64748b;
+    text-align: center;
+}
+
+.tableWrap {
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 0.5px solid rgba(15, 23, 42, 0.08);
+    background: #f8fafc;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 920px;
+}
+
+.table th {
+    padding: 16px 14px;
+    background: #f1f5f9;
+    border-bottom: 0.5px solid rgba(15, 23, 42, 0.08);
+    color: #64748b;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.table td {
+    padding: 16px 14px;
+    border-bottom: 0.5px solid rgba(15, 23, 42, 0.08);
+    color: #334155;
+    vertical-align: middle;
+    background: #ffffff;
+}
+
+.table tbody tr:hover td {
+    background: #f8fbff;
+}
+
+.muted {
+    color: #64748b;
+    font-size: 0.88rem;
+}
+
+.link {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.cellStrong {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.fileLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.attemptBadge,
+.statusBadge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 26px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.statusActive {
+    background: #ecfdf5;
+    border: 0.5px solid #a7f3d0;
+    color: #047857;
+}
+
+.statusBlocked {
+    background: #fef2f2;
+    border: 0.5px solid #fecaca;
+    color: #b91c1c;
+}
+
+.statusNeutral {
+    background: #f8fafc;
+    border: 0.5px solid #cbd5e1;
+    color: #475569;
+}
+
+.inlinePrompt {
+    color: #64748b;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.reasonCell {
+    min-width: 180px;
+    max-width: 280px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.reasonRowDanger {
+    padding: 12px 14px;
+    background: #fff7f7;
+    border-bottom: 0.5px solid #fecaca;
+}
+
+.reasonRowSuccess {
+    padding: 12px 14px;
+    background: #f0fdf4;
+    border-bottom: 0.5px solid #bbf7d0;
+}
+
+.reasonEditor {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.reasonInput {
+    flex: 1;
+    min-width: 240px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0.5px solid rgba(15, 23, 42, 0.16);
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 0.86rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.reasonActions {
+    display: flex;
+    gap: 8px;
+    padding-top: 2px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .toolbar {
+        width: 100%;
+    }
+
+    .tabGroup {
+        width: 100%;
+        justify-content: stretch;
+    }
+
+    .tabButton {
+        flex: 1;
+    }
+}

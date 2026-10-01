@@ -1,0 +1,320 @@
+.page {
+    display: grid;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.eyebrow {
+    color: #2563eb;
+    font-size: 0.76rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+.header h2 {
+    margin: 8px 0 10px;
+    color: #0f172a;
+    font-size: clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.header p {
+    margin: 0;
+    max-width: 62ch;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.refreshButton,
+.primaryButton,
+.filterButton,
+.detailButton,
+.approveButton,
+.rejectButton {
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s ease;
+}
+
+.refreshButton,
+.filterButton,
+.detailButton {
+    border: 0.5px solid rgba(15, 23, 42, 0.1);
+    background: #f7f8fb;
+    color: #475569;
+}
+
+.primaryButton,
+.approveButton {
+    border: none;
+    background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+    color: #ffffff;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, 0.16);
+}
+
+.rejectButton {
+    border: 0.5px solid #fecaca;
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.refreshButton:hover,
+.primaryButton:hover,
+.filterButton:hover,
+.detailButton:hover,
+.approveButton:hover,
+.rejectButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.summaryGrid,
+.dualGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.dualGrid {
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.summaryCard,
+.panel {
+    padding: 22px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 0.5px solid rgba(15, 23, 42, 0.08);
+    box-shadow:
+        0 1px 3px rgba(15, 23, 42, 0.06),
+        0 14px 36px rgba(15, 23, 42, 0.06);
+}
+
+.summaryLabel,
+.panelHint {
+    color: #64748b;
+}
+
+.summaryCard strong {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    color: #0f172a;
+}
+
+.summaryCard p {
+    margin: 12px 0 0;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.panelTitle {
+    color: #0f172a;
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+
+.panelHint {
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.form {
+    margin-top: 18px;
+    display: grid;
+    gap: 14px;
+}
+
+.form label {
+    display: grid;
+    gap: 8px;
+    color: #334155;
+}
+
+.form input {
+    min-height: 46px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 0.5px solid rgba(15, 23, 42, 0.1);
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.filterRow {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filterButtonActive {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1d4ed8;
+}
+
+.tableWrap {
+    margin-top: 18px;
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 0.5px solid rgba(15, 23, 42, 0.08);
+    background: #f8fafc;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 14px 12px;
+    text-align: left;
+    vertical-align: top;
+    color: #334155;
+    border-bottom: 0.5px solid rgba(15, 23, 42, 0.08);
+    background: #ffffff;
+}
+
+.table th {
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.actionStack {
+    display: grid;
+    gap: 8px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.pending {
+    background: #fffbeb;
+    color: #b45309;
+    border: 0.5px solid #fde68a;
+}
+
+.approved {
+    background: #f0fdf4;
+    color: #15803d;
+    border: 0.5px solid #bbf7d0;
+}
+
+.rejected {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 0.5px solid #fecaca;
+}
+
+.detailGrid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.detailCard,
+.detailBlock {
+    padding: 18px;
+    border-radius: 16px;
+    background: #f7f8fb;
+    border: 0.5px solid rgba(15, 23, 42, 0.08);
+}
+
+.detailCard strong {
+    display: block;
+    margin-top: 10px;
+    color: #0f172a;
+    font-size: 1.15rem;
+}
+
+.detailCard p,
+.detailBlock p {
+    margin: 10px 0 0;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.detailLabel {
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.detailColumns {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.error,
+.success,
+.empty {
+    padding: 14px 16px;
+    border-radius: 12px;
+}
+
+.error {
+    background: #fef2f2;
+    border: 0.5px solid #fecaca;
+    color: #dc2626;
+}
+
+.success {
+    background: #f0fdf4;
+    border: 0.5px solid #bbf7d0;
+    color: #047857;
+}
+
+.empty {
+    margin-top: 18px;
+    background: #f7f8fb;
+    color: #64748b;
+}
+
+@media (max-width: 1080px) {
+    .summaryGrid,
+    .dualGrid,
+    .detailGrid,
+    .detailColumns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .summaryGrid,
+    .dualGrid,
+    .detailGrid,
+    .detailColumns {
+        grid-template-columns: 1fr;
+    }
+}

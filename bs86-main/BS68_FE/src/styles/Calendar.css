@@ -1,0 +1,95 @@
+.calendar-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: var(--bg-light);
+  padding: 15px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background-color: var(--white);
+  border: 2px solid var(--border-gray);
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.calendar-display {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-input {
+  padding: 8px 12px;
+  border: 2px solid var(--border-gray);
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--white);
+  transition: border-color 0.3s ease;
+}
+
+.date-input:hover {
+  border-color: var(--primary-green);
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(27, 127, 71, 0.1);
+}
+
+.today-button {
+  padding: 8px 16px;
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.today-button:hover {
+  background-color: #155a3a;
+  box-shadow: 0 2px 8px rgba(27, 127, 71, 0.3);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .calendar-container {
+    gap: 8px;
+  }
+
+  .calendar-display {
+    gap: 8px;
+  }
+
+  .nav-button,
+  .date-input,
+  .today-button {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}

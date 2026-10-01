@@ -1,0 +1,10 @@
+/* ===== Leaflet global overrides ===== */
+@import 'leaflet/dist/leaflet.css';
+.leaflet-container {
+    height: 100%;
+    width: 100%;
+}
+
+.leaflet-control {
+    font-family: system-ui, sans-serif;
+}

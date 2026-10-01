@@ -1,0 +1,98 @@
+.container {
+    padding: 20px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* TEXT */
+.card p {
+    color: #8fa3c1;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.card h3 {
+    margin-top: 12px;
+    color: #f8fafc;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.table {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+    border-radius: 0px;
+}
+
+.table th {
+    padding: 16px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    color: #cfe0f6;
+    font-size: 0.84rem;
+    font-weight: 800;
+    text-align: left;
+}
+
+.table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    color: #e5eefb;
+}
+
+.table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters input,
+.filters select {
+    padding: 8px;
+}
+
+.filters button {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.failed {
+    color: red;
+    font-weight: bold;
+}
+
+.warning {
+    color: orange;
+    font-weight: bold;
+}

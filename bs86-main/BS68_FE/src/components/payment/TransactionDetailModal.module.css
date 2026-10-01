@@ -1,0 +1,138 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: rgba(5, 10, 18, 0.72);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal {
+    width: min(100%, 920px);
+    max-height: min(90dvh, 920px);
+    overflow: auto;
+    border-radius: 26px;
+    background: linear-gradient(180deg, rgba(16, 23, 38, 0.98), rgba(9, 14, 24, 0.98));
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 32px 80px rgba(2, 6, 23, 0.5);
+    padding: 22px;
+    color: #e5eef8;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.kicker {
+    color: #7dd3fc;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.title {
+    margin: 0;
+    font-size: 1.45rem;
+    color: #f8fafc;
+}
+
+.closeBtn {
+    min-height: 42px;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    background: rgba(255, 255, 255, 0.04);
+    color: #e5eef8;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.feedback,
+.feedbackError {
+    border-radius: 16px;
+    padding: 14px 16px;
+}
+
+.feedback {
+    background: rgba(148, 163, 184, 0.08);
+    color: #cbd5e1;
+}
+
+.feedbackError {
+    background: rgba(127, 29, 29, 0.28);
+    color: #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.18);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.field {
+    padding: 15px 16px;
+    border-radius: 18px;
+    background: rgba(15, 23, 42, 0.86);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.label {
+    display: block;
+    color: #8fa1b5;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.field strong {
+    color: #f8fafc;
+    font-size: 0.98rem;
+    word-break: break-word;
+}
+
+.placeholder {
+    color: #94a3b8;
+}
+
+.codeBlock {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: 'Consolas', 'SFMono-Regular', monospace;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #dbe7f3;
+}
+
+@media (max-width: 760px) {
+    .modal {
+        padding: 18px 14px;
+        border-radius: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .closeBtn {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

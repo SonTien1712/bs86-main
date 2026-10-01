@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="0;url=/" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var redirectPath =
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+
+        try {
+          window.sessionStorage.setItem("spa-redirect-path", redirectPath);
+        } catch (error) {}
+
+        window.location.replace("/");
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

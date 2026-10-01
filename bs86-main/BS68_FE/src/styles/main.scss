@@ -1,0 +1,11 @@
+/* Sass partials — giữ nguyên */
+@use 'global';
+@use 'leaflet';
+@use 'mixin';
+@use 'reset';
+@use 'variable';
+
+/* ❌ Xóa 3 dòng này khỏi scss */
+/* @import 'normalize.css';   */
+/* @import "tailwindcss";     */
+/* @import "tw-animate-css";  */

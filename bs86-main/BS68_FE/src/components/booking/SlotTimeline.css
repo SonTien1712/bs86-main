@@ -1,0 +1,119 @@
+.timeline-container {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.18);
+    padding: 12px;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: 800;
+}
+
+.count {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.timeline-wrap {
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.timeline-row {
+    display: flex;
+    gap: 10px;
+    min-height: 92px;
+    width: max-content;
+}
+
+/* SLOT BASE */
+.slot {
+    width: 160px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* STATUS */
+.available {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.booked {
+    background: #ef4444;
+    color: #fff;
+}
+
+.blocked {
+    background: #7f1d1d;
+    color: #fff;
+}
+
+/* STATE */
+.selected {
+    border: 2px solid #111827;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+.expired {
+    background: #9ca3af;
+    color: #fff;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* CONTENT */
+.time {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.pill {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.slot-id {
+    font-size: 11px;
+    opacity: 0.85;
+}
+
+.error {
+    color: #fecaca;
+    font-size: 13px;
+}
+
+.hint {
+    font-size: 13px;
+    opacity: 0.85;
+}

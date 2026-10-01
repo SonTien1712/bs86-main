@@ -1,0 +1,84 @@
+.court-grid-container {
+  margin-bottom: 30px;
+}
+
+.grid-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.court-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.court-card {
+  padding: 16px;
+  background-color: var(--primary-light);
+  border: 2px solid var(--border-gray);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.court-card:hover {
+  border-color: var(--primary-green);
+  box-shadow: 0 4px 12px rgba(27, 127, 71, 0.1);
+  transform: translateY(-2px);
+}
+
+.court-card.active {
+  background-color: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--white);
+}
+
+.court-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.court-card.active .court-name {
+  color: var(--white);
+}
+
+.court-type {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.court-card.active .court-type {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .court-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+  }
+
+  .court-card {
+    padding: 12px;
+  }
+
+  .court-name {
+    font-size: 14px;
+  }
+
+  .court-type {
+    font-size: 11px;
+  }
+}

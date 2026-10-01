@@ -1,0 +1,406 @@
+.shell {
+    min-height: 100dvh;
+    background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 24%),
+        linear-gradient(180deg, #090d16 0%, #0d1320 52%, #0b1018 100%);
+    padding: 20px 16px 92px;
+    color: #f8fafc;
+    font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif;
+}
+
+.container {
+    width: min(100%, 1040px);
+    margin: 0 auto;
+}
+
+.hero,
+.contextCard,
+.chatCard,
+.dialog {
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(16, 23, 38, 0.94), rgba(10, 15, 25, 0.9));
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    box-shadow: 0 24px 54px rgba(2, 6, 23, 0.24);
+}
+
+.hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 26px;
+}
+
+.kicker {
+    color: #7dd3fc;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.title {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 900;
+}
+
+.subtitle {
+    margin: 10px 0 0;
+    color: #9fb2c8;
+    line-height: 1.7;
+}
+
+.subtitleSecondary {
+    margin: 6px 0 0;
+    color: #dce7f3;
+    line-height: 1.6;
+}
+
+.heroActions,
+.actionRow,
+.dialogActions,
+.composeActions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.primaryBtn {
+    border: none;
+    background: linear-gradient(135deg, #1595d3, #1ea672);
+    color: #ffffff;
+}
+
+.secondaryBtn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    color: #dbe7f3;
+}
+
+.primaryBtn:hover,
+.secondaryBtn:hover {
+    transform: translateY(-1px);
+}
+
+.feedback,
+.feedbackError,
+.successBanner,
+.emptyState {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-radius: 20px;
+}
+
+.feedback {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(148, 163, 184, 0.14);
+    color: #9fb2c8;
+}
+
+.feedbackError {
+    background: rgba(127, 29, 29, 0.24);
+    border: 1px solid rgba(248, 113, 113, 0.18);
+    color: #fecaca;
+}
+
+.successBanner {
+    background: rgba(20, 83, 45, 0.3);
+    border: 1px solid rgba(34, 197, 94, 0.18);
+    color: #bbf7d0;
+}
+
+.contextCard,
+.chatCard {
+    margin-top: 18px;
+    padding: 22px;
+}
+
+.contextGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.contextBlock,
+.postCopy {
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.contextBlock span,
+.postCopy span {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8ca0b9;
+}
+
+.contextBlock strong {
+    display: block;
+    margin-top: 8px;
+    color: #f8fafc;
+    line-height: 1.5;
+}
+
+.postCopy {
+    margin-top: 14px;
+}
+
+.postCopy p {
+    margin: 10px 0 0;
+    color: #dce7f3;
+    line-height: 1.7;
+}
+
+.actionRow {
+    margin-top: 16px;
+    align-items: center;
+}
+
+.inlineHint {
+    color: #9fb2c8;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.chatHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.chatTitle {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #f8fafc;
+}
+
+.chatSubtitle {
+    margin-top: 8px;
+    color: #9fb2c8;
+    line-height: 1.6;
+}
+
+.connectionBadge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.connectionOn {
+    background: rgba(34, 197, 94, 0.14);
+    border: 1px solid rgba(34, 197, 94, 0.26);
+    color: #86efac;
+}
+
+.connectionOff {
+    background: rgba(245, 158, 11, 0.14);
+    border: 1px solid rgba(245, 158, 11, 0.22);
+    color: #fde68a;
+}
+
+.socketWarning {
+    margin-bottom: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    background: rgba(120, 53, 15, 0.24);
+    border: 1px solid rgba(251, 191, 36, 0.18);
+    color: #fde68a;
+}
+
+.messageList {
+    display: grid;
+    gap: 12px;
+    max-height: 560px;
+    overflow: auto;
+    padding-right: 4px;
+}
+
+.messageRow {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.messageRowMine {
+    justify-content: flex-end;
+}
+
+.messageBubble {
+    width: min(100%, 72%);
+    padding: 14px 16px;
+    border-radius: 18px 18px 18px 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.messageBubbleMine {
+    border-radius: 18px 18px 6px 18px;
+    background: rgba(21, 149, 211, 0.16);
+    border-color: rgba(56, 189, 248, 0.18);
+}
+
+.messageSender {
+    color: #7dd3fc;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.messageContent {
+    color: #f8fafc;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.messageTime {
+    margin-top: 8px;
+    color: #8ca0b9;
+    font-size: 0.76rem;
+}
+
+.emptyState {
+    display: grid;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(148, 163, 184, 0.14);
+    color: #9fb2c8;
+}
+
+.emptyState strong {
+    color: #f8fafc;
+}
+
+.composeForm {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.composeInput {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 110px;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    background: #162238;
+    color: #f8fafc;
+    font: inherit;
+    resize: vertical;
+}
+
+.composeInput:focus {
+    outline: none;
+    border-color: rgba(56, 189, 248, 0.42);
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.08);
+}
+
+.composeActions {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialogOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 260;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(3, 8, 18, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.dialog {
+    width: min(100%, 520px);
+    padding: 24px;
+}
+
+.dialogTitle {
+    color: #f8fafc;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.dialogCopy {
+    margin: 12px 0 0;
+    color: #9fb2c8;
+    line-height: 1.7;
+}
+
+.dialogActions {
+    margin-top: 18px;
+    justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+    .hero,
+    .contextGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .contextGrid {
+        display: grid;
+    }
+}
+
+@media (max-width: 720px) {
+    .chatHeader {
+        flex-direction: column;
+    }
+
+    .contextGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .messageBubble {
+        width: 100%;
+    }
+
+    .composeActions,
+    .dialogActions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .composeActions button,
+    .dialogActions button,
+    .heroActions a {
+        width: 100%;
+    }
+}

@@ -1,0 +1,58 @@
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+
+.modalBox{
+  width:600px;
+  background:white;
+  border-radius:14px;
+  padding:25px;
+}
+
+.modalHeader{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.closeBtn{
+  border:none;
+  background:none;
+  font-size:22px;
+  cursor:pointer;
+}
+
+.bookingOption{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+.bookingOption.green{
+  background:#dff3e2;
+}
+
+.bookingOption.purple{
+  background:#f2d9f6;
+}
+
+.goBtn{
+  background:#27ae60;
+  border:none;
+  color:white;
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:18px;
+}
